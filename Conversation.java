@@ -26,27 +26,26 @@ class Conversation {
     int times = input.nextInt();
     //input.nextLine(); // clear out extra \n
     //System.out.println();
-    input.close();
+    //input.close();
 
     Conversation convo = new Conversation(times);
 
     Conversation.welcomeMesage();
 
-    System.out.println("Enter thought:"); 
-    Scanner sentence = new Scanner(System.in); //Creates New scanner
-    String statement = sentence.nextLine(); //reads input from user
-   // sentence.close();
+    String statement = input.nextLine(); //reads input from user
+    
     for (int i = 0; i < convo.rounds; i++){
-      //String statement = sentence.nextLine(); //reads input from user
+      System.out.println("Enter thought:\n"); 
+      statement = input.nextLine(); //reads input from user
       System.out.println(statement);
-      //sentence.close();
+      
 
 
       convo.response();
 
     }
-      
-    sentence.close();
+     
+   input.close ();
 
   }
   
