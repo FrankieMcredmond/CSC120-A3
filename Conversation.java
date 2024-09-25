@@ -1,4 +1,3 @@
-import java.beans.Statement;
 import java.util.Scanner;
 class Conversation {
   int rounds;
@@ -9,13 +8,13 @@ class Conversation {
   public static void welcomeMesage(){
     System.out.println("Hi there!  What's on your mind?");
   }
-  public void response(){
+    
+  public String response(statement){
+    if statement== "i";{
+      return ("uo");}
     System.out.println("mhm");
+    return "mhm";
   }
-  //public static String[] stringList(String sentenceString) {
-    //char[] myArray = sentenceString.toCharArray();
-
-  //}
 
 
 
@@ -24,28 +23,44 @@ class Conversation {
     Scanner input = new Scanner(System.in); 
     System.out.print("How many rounds would you like? ");
     int times = input.nextInt();
-    //input.nextLine(); // clear out extra \n
-    //System.out.println();
-    //input.close();
 
+    ///Initialize Conversation and Transcription
     Conversation convo = new Conversation(times);
+    String[] Transcript= new String [2* times+2];
 
+    ///Prints Welcome Message and Transcripts it
     Conversation.welcomeMesage();
-
+    Transcript[0]= "Hi there!  What's on your mind?";
+    
+    ///Starts String statement
     String statement = input.nextLine(); //reads input from user
     
-    for (int i = 0; i < convo.rounds; i++){
-      System.out.println("Enter thought:\n"); 
+    ///For Loop: Conversation Rounds
+    for (int i = 0; i < 2* convo.rounds; i=i+2){ 
       statement = input.nextLine(); //reads input from user
-      System.out.println(statement);
+      Transcript[i+1]=statement; ///Transcripts Input
       
 
 
-      convo.response();
+      String Chatbot= convo.response(statement);///Creates Response
+      Transcript[i+2]=Chatbot;/// Transcripts Response
 
     }
-     
-   input.close ();
+    ///For Loop Ends
+    input.close ();
+
+    ///Prints Goodbye Message and Transcripts it
+    System.out.println("Goodbye");
+    Transcript[2*convo.rounds+1]="Goodbye";
+
+    ///Prints Transcript
+    System.out.println("\n");
+    System.out.println("Transcript:\n");
+    for(int i=0; i<=2*times+1; i++){
+      System.out.println (Transcript[i]);
+      
+    }
+    
 
   }
   
