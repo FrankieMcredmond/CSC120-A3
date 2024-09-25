@@ -22,15 +22,15 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 ### Level 2 (3 pts)
 
-_____ 1 pt: Uses a canned response when no mirror words detected
+**YES** 1 pt: Uses a canned response when no mirror words detected
 
-_____ 1 pt: Detects the requested set of mirror words (at minimum)
+**PART** 1 pt: Detects the requested set of mirror words (at minimum)
 
-_____ 1 pt: Replaces simple mirror words appropriately (unpunctuated, lowercase)
+**PART** 1 pt: Replaces simple mirror words appropriately (unpunctuated, lowercase)
 
 ### Level 3 (3 pts)
 
-_____ 1 pt: Makes all appropriate mirror replacements
+**PART** 1 pt: Makes all appropriate mirror replacements
 
 **YES** 1 pt: Stores transcript of the conversation in an array
 
@@ -52,9 +52,9 @@ _____ (Kudos!) Handles you --> me/I dilemma
 
 **YES** 2 pts: Executes fully & consistently without crashing (exception/freeze)
 
-_____ 2 pt: Complies with style guidelines (missing items 1 pt each):
+**PART** 2 pt: Complies with style guidelines (missing items 1 pt each):
 
-      _____ Classes & class members all have Javadoc header comments
+      **NO** Classes & class members all have Javadoc header comments
 
       **YES** Clear and consistent indentation of bracketed sections
 
