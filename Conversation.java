@@ -9,9 +9,7 @@ class Conversation {
     System.out.println("Hi there!  What's on your mind?");
   }
     
-  public String response(statement){
-    if statement== "i";{
-      return ("uo");}
+  public String response(){
     System.out.println("mhm");
     return "mhm";
   }
@@ -42,8 +40,7 @@ class Conversation {
       
 
 
-      String Chatbot= convo.response(statement);///Creates Response
-      Transcript[i+2]=Chatbot;/// Transcripts Response
+      Transcript[i+2]=convo.response();///Creates Response/// Transcripts Response
 
     }
     ///For Loop Ends
