@@ -10,8 +10,18 @@ class Conversation {
   }
     
   public String response(){
-    System.out.println("mhm");
-    return "mhm";
+    int randomNum = (int)(Math.random() * 4);
+    if (randomNum==1){System.out.println("mhm");
+    return "mhm";}
+    else if (randomNum==2){System.out.println("cool!");
+    return "Cool!";}
+    else if (randomNum==3){System.out.println("uh huh");
+    return "uh huh";}
+    else{
+      System.out.println("wow");
+      return "wow";
+    }
+    
   }
 
 
