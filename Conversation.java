@@ -9,18 +9,23 @@ class Conversation {
     System.out.println("Hi there!  What's on your mind?");
   }
     
-  public String response(){
-    int randomNum = (int)(Math.random() * 4);
-    if (randomNum==1){System.out.println("mhm");
-    return "mhm";}
-    else if (randomNum==2){System.out.println("cool!");
-    return "Cool!";}
-    else if (randomNum==3){System.out.println("uh huh");
-    return "uh huh";}
-    else{
-      System.out.println("wow");
-      return "wow";
-    }
+  public String response(String Sentence){
+    String myStr = Sentence;
+    if (myStr.contains("I ")==true){System.out.println(myStr.replaceAll("I ", "You"));
+    return (myStr.replaceAll("I ", "You"));
+      
+    } 
+    else {int randomNum = (int)(Math.random() * 4);
+      if (randomNum==1){System.out.println("mhm");
+      return "mhm";}
+      else if (randomNum==2){System.out.println("cool!");
+      return "Cool!";}
+      else if (randomNum==3){System.out.println("uh huh");
+      return "uh huh";}
+      else{
+        System.out.println("wow");
+        return "wow";
+      }}
     
   }
 
@@ -50,7 +55,7 @@ class Conversation {
       
 
 
-      Transcript[i+2]=convo.response();///Creates Response/// Transcripts Response
+      Transcript[i+2]=convo.response(statement);///Creates Response/// Transcripts Response
 
     }
     ///For Loop Ends
