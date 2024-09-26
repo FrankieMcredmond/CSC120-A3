@@ -11,8 +11,8 @@ class Conversation {
     
   public String response(String Sentence){
     String myStr = Sentence;
-    if (myStr.contains("I ")==true){System.out.println(myStr.replaceAll("I ", "You"));
-    return (myStr.replaceAll("I ", "You"));
+    if (myStr.contains("I ")==true){System.out.println(myStr.replaceAll("I ", "You "));
+    return (myStr.replaceAll("I ", "You "));
       
     } 
     else {int randomNum = (int)(Math.random() * 4);
